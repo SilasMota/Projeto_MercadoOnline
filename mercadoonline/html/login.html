@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Mercado Online - Login</title>
+		<link rel="icon" type="image/jpg" href="images/carrinhobranco.png" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+ 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+ 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	</head>
+	<body>
+		<!-- -->
+		<nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
+		  <a id="logo" class="navbar-brand logo" href="index.html"><span class="fa fa-shopping-cart"></span> <span>Mercado Online</span></a>
+		</nav>
+
+		<!-- Cadastro -->
+		<div class="container">
+		<div  id="logreg-forms">
+	        <form class="form-signin">
+	            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Login do cliente: </h1>
+	            <div class="form-group">
+	            	<label for="inputEmail">E-mail:</label>
+	            	<input type="email" id="inputEmail" class="form-control" placeholder="Ex: cliente@email.com" required="" autofocus="">
+	        	</div>	
+	        	<div class="form-group">
+	            	<label for="inputPassword">Senha:</label>
+	            	<input type="password" id="inputPassword" class="form-control" placeholder="Senha" required="">
+	            </div>
+	            <button class="btn btn-danger btn-block" type="submit" ><i class="fas fa-sign-in-alt"></i> Entrar</button>
+	           
+	            <hr>
+	            <!-- Novo cadastro  -->
+	            <label for="btn-signup">Novo no Mercado Online?</label>
+	            <a class="btn btn-secondary btn-block" style="color: white;" id="btn-signup" href="register.html"><i class="fas fa-user-plus"></i> Crie sua conta</a>
+            </form>
+
+                        
+            
+            
+   		 </div>
+    	</div>
+    
+
+		<script type="text/javascript">
+
+			//controla expanção da barra
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+			  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+			    document.getElementById("navbar").style.padding = "0 10px";
+			    document.getElementById("logo").style.fontSize = "1.5em";
+			  } else {
+			    document.getElementById("navbar").style.padding = "8px 10px";
+			    document.getElementById("logo").style.fontSize = "1.7em";
+			  }
+			}
+			
+
+			//controla rolagem do menu de categorias
+			$(".dropdown").on("show.bs.dropdown", 
+				function desfixa(){
+					if (window.matchMedia("(max-width: 992px)").matches)
+						document.getElementById("navbar").style.position = "static";
+				});
+
+			$(".dropdown").on("hidden.bs.dropdown", 
+				function desfixa(){
+						document.getElementById("navbar").style.position = "sticky";
+						document.getElementById("navbar").style.top = "0";
+						document.getElementById("navbar").style.widith = "100%";
+				});
+		</script>
+	
+	</body>
+</html>

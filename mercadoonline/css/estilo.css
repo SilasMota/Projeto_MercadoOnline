@@ -1,0 +1,231 @@
+a{
+	color:black;
+	text-decoration: none;
+}
+
+
+.container{
+	min-height: 720px;
+
+}
+
+
+.mega-menu{
+	width: 400px;
+	overflow: hidden;
+	padding: 10px;
+}
+
+#navbar{
+	width: 100%;
+	position: sticky;
+	top: 0;
+}
+
+#navbar, #logo {
+	transition: 0.4s;
+}
+
+.mega-menu a{
+	text-decoration: none;
+	color: black;
+}
+
+.mega-menu a:hover{
+	color: grey;
+}
+
+.mega-menu ul{
+	list-style: none;
+}
+
+.logo{
+	font-family: Gill Sans, sans-serif;
+}
+
+nav button,nav input, .autentifica{
+		margin: 5px 0;
+}
+
+.prod{
+	width:240px;
+	margin: 20px;
+	padding: 10px;
+	border: 2px solid white;
+	display: inline-block;
+}
+
+.prod img{
+	margin: 0 auto;
+	width: 200px;
+	height: 210px;
+}
+
+.prod .corpo-prod{
+	display: inline;
+	text-decoration: none;
+	color: black;
+	height: 600px;
+}
+.decricao-prod{
+	height: 140px;
+	overflow: hidden;
+}
+
+.carrinho img{
+	float: left;
+	width: 100px;
+	height: 110px;
+	margin-right: 20px;
+}
+
+.carrinho .prod-qtd input{
+	display: block;
+	border: 2px solid lightgrey;
+	border-radius: 4px;
+ 	box-sizing: border-box;
+	background-color: white;
+	padding: 10px;
+	width: 70px;
+}
+
+.destaques{
+	padding: 10px;
+	border-bottom: 1px solid lightgrey;
+}
+
+.destaques .prod{
+	width: 320px;
+	margin: 20px;
+	padding: 20px;
+	border: 2px solid white;
+}
+
+.destaques .prod img{
+	width: 280px;
+	height: 300px;
+}
+
+.prod:hover{
+	border-color: #d9534f;
+}
+
+footer{
+    color: white;
+	display: block;
+	margin-top: 50px;
+	width: 100%;
+	padding: 20px 0;
+	background-color: #404040;
+	clear: both;
+}
+
+footer div{
+	padding-left: 20px;
+}
+
+@media(min-width: 1200px){
+	.busca{
+		margin: 0 auto;
+		width: 50%;
+	}
+
+	.busca .barra{
+		width: 70%;
+	}
+
+	.autentifica{
+		margin-left: 4.5%;
+	}
+
+	.logo{
+		font-size: 2.5em;
+		margin: 0 4%; 
+	}
+}
+
+@media(max-width: 992px){
+	.mega-menu{
+		width: 80%;
+	}
+
+	.busca .barra{
+		width: 87%;
+	}
+
+	.autentifica{
+		display: none;
+		margin-left: 20%;
+		float: right;
+	}
+	.col-menu{
+		padding: 5px 0;
+		border-bottom: 1px solid lightgrey; 
+	}
+
+	footer{
+		padding: 0;
+	}
+
+	.prod{
+	margin: 0 auto;
+	padding: 5px;
+	}
+
+	 #logreg-forms{
+        width:300px;
+    }
+}
+/*--------------------------------------------*/
+
+/* sign in FORM */
+#logreg-forms{
+    width:412px;
+    margin:10vh auto;
+  	
+}
+#logreg-forms form {
+    width: 100%;
+    max-width: 410px;
+    padding: 15px;
+    margin: auto;
+}
+#logreg-forms .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+#logreg-forms .form-control:focus { z-index: 2; }
+
+
+#logreg-forms a{
+    display: block;
+    padding-top:10px;
+    color:lightseagreen;
+}
+
+#logreg-form .lines{
+    width:200px;
+    border:1px solid red;
+}
+
+
+#logreg-forms button[type="submit"]{ margin-top:10px; }
+
+
+/*--------------------------------------------*/
+/* Register*/
+#register-forms{
+    width: 100%;
+    margin:3vh auto;
+}
+
+
+#register-forms form {
+    width: 100%;
+    max-width: 700px;
+    padding: 15px;
+    margin: auto;
+}

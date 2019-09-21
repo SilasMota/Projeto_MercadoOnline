@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Cadastro de Produtos</title>
+		<link rel="icon" type="image/jpg" href="images/carrinhobranco.png" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+ 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+ 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	</head>
+	<body>
+		<!-- -->
+
+
+		<nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
+		  <a id="logo" class="navbar-brand logo" href="admin.html"><span class="fa fa-shopping-cart"></span> <span>Mercado Online</span></a>
+
+		  <!-- botão de menu -->
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+
+		    	<!-- menu de categorias -->
+		      <li class="nav-item dropdown">
+		        <button class="btn btn-outline-light dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          Categorias
+		        </button>
+
+		        <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+		         	<div class="row">
+		         		<div class="col-md-6 col-menu">
+		         			<ul>
+			         			<li><a href="#">Categoria 1</a></li>
+			         			<li><a href="#">Categoria 2</a></li>
+			         			<li><a href="#">Categoria 3</a></li>
+			         			<li><a href="#">Categoria 4</a></li>
+			         			<li><a href="#">Categoria 5</a></li>
+			         			<li><a href="#">Categoria 6</a></li>
+			         		</ul>
+		         		</div>
+
+		         		<div class="col-md-6 col-menu">
+		         			<ul>
+			         			<li><a href="#">Categoria 1</a></li>
+			         			<li><a href="#">Categoria 2</a></li>
+			         			<li><a href="#">Categoria 3</a></li>
+			         			<li><a href="#">Categoria 4</a></li>
+			         			<li><a href="#">Categoria 5</a></li>
+			         			<li><a href="#">Categoria 6</a></li>
+			         		</ul>
+		         		</div>
+		         	</div>
+		        </div>
+		      </li>
+
+		    </ul>
+
+		    <!-- area busca -->
+		    <form class="form-inline my-2 my-sm-0 busca">
+		      <input class="form-control mr-sm-2 barra" type="search" placeholder="Procure aqui" aria-label="Search">
+		      <button class="btn btn-outline-light my-sm-0 fas fa-search" type="submit" style="padding: 10px;"> </button>
+		    </form>
+
+		    <!-- autentificação -->
+		    <div class="autentifica">
+			   <div class="dropdown ">
+				  <button type="button" class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+				    Administrador
+				  </button>
+				  <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left" aria-labelledby="dropdownMenuButton">
+				    <a class="dropdown-item" href="cadastro-produto.html">Cadastrar Produto</a>
+				    <a class="dropdown-item" href="listagem-pedidos.html">Lista de Pedidos</a>
+				    <a class="dropdown-item" href="listagem-clientes.html">Lista de Clientes</a>
+				  </div>
+				</div>
+
+			</div>
+
+
+		  </div>
+		</nav>
+
+		<div class="container">
+			<form >
+				<div class="form-gorup form-row">
+					<label for="nome-id">Nome do Produto</label>
+					<input type="text" class="form-control" name="nome-id" id="nome-id">
+				</div>
+
+				<div class="fabricante">
+					<label for="nome-id">Fabricante</label>
+					<input type="text" class="form-control" name="fabricante" id="fabricante">
+				</div>
+
+				<div class="form-group">
+				    <label for="descricao">Descrição do Produto</label>
+					<textarea class="form-control" id="descricao" name="descricao" rows="4"></textarea>
+				</div>
+
+				<div class="preco">
+					<label for="nome-id">Preço</label>
+					<input type="text" class="form-control" name="preco" id="preco">
+				</div>
+
+				<div class="quantidade">
+					<label for="nome-id">Quantidade</label>
+					<input type="number" class="form-control" name="quantidade" id="quantidade">
+				</div>
+
+				<div class="form-group">
+			    	<label for="foto">Foto do Produto</label>
+			    	<input type="file" class="form-control-file" name="foto" id="foto">
+			  	</div>
+
+			  	<button type="submit" class="btn btn-danger w-100">Cadastrar</button>
+
+			</form>
+		</div>
+
+		<footer>
+			<div>
+				Mercado Online<br>
+				mercadoonline@email.com<br>
+				Nome da Rua , 123 , Cidade.
+			</div>
+		</footer> 	
+	</body>
+</html>

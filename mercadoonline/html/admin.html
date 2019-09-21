@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Mercado Online</title>
+		<link rel="icon" type="image/jpg" href="images/carrinhobranco.png" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+ 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+ 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	</head>
+	<body>
+		<!-- -->
+
+
+		<nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
+		  <a id="logo" class="navbar-brand logo" href="admin.html"><span class="fa fa-shopping-cart"></span> <span>Mercado Online</span></a>
+
+		  <!-- botão de menu -->
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+
+		    	<!-- menu de categorias -->
+		      <li class="nav-item dropdown">
+		        <button class="btn btn-outline-light dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          Categorias
+		        </button>
+
+		        <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+		         	<div class="row">
+		         		<div class="col-md-6 col-menu">
+		         			<ul>
+			         			<li><a href="#">Categoria 1</a></li>
+			         			<li><a href="#">Categoria 2</a></li>
+			         			<li><a href="#">Categoria 3</a></li>
+			         			<li><a href="#">Categoria 4</a></li>
+			         			<li><a href="#">Categoria 5</a></li>
+			         			<li><a href="#">Categoria 6</a></li>
+			         		</ul>
+		         		</div>
+
+		         		<div class="col-md-6 col-menu">
+		         			<ul>
+			         			<li><a href="#">Categoria 1</a></li>
+			         			<li><a href="#">Categoria 2</a></li>
+			         			<li><a href="#">Categoria 3</a></li>
+			         			<li><a href="#">Categoria 4</a></li>
+			         			<li><a href="#">Categoria 5</a></li>
+			         			<li><a href="#">Categoria 6</a></li>
+			         		</ul>
+		         		</div>
+		         	</div>
+		        </div>
+		      </li>
+
+		    </ul>
+
+		    <!-- area busca -->
+		    <form class="form-inline my-2 my-sm-0 busca">
+		      <input class="form-control mr-sm-2 barra" type="search" placeholder="Procure aqui" aria-label="Search">
+		      <button class="btn btn-outline-light my-sm-0 fas fa-search" type="submit" style="padding: 10px;"> </button>
+		    </form>
+
+		    <!-- autentificação -->
+		    <div class="autentifica">
+			   <div class="dropdown ">
+				  <button type="button" class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+				    Administrador
+				  </button>
+				  <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left" aria-labelledby="dropdownMenuButton">
+				    <a class="dropdown-item" href="cadastro-produto.html">Cadastrar Produto</a>
+				    <a class="dropdown-item" href="listagem-pedidos.html">Lista de Pedidos</a>
+				    <a class="dropdown-item" href="listagem-clientes.html">Lista de Clientes</a>
+				  </div>
+				</div>
+
+			</div>
+
+
+		  </div>
+		</nav>
+
+		<!-- Carrinho Modal -->
+		<div class="modal" id="myModal">
+		  <div class="modal-dialog modal-lg">
+		    <div class="modal-content">
+
+		      <!-- Modal Header -->
+		      <div class="modal-header">
+		        <h4 class="modal-title">Carrinho</h4>
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		      </div>
+
+		      <!-- Modal body -->
+		      <div class="modal-body carrinho">
+		        <table class="table">
+		        	<thead>
+		        		<tr>
+		        			<th scope="col">Produto</th>
+		        			<th scope="col">Quantidade</th>
+		        			<th scope="col">Preço</th>
+		        		</tr>
+		        	</thead>
+		        	<tbody>
+	        			<tr>
+	        				<td class="prod-info">
+	        					<img src="images/prod.jpg">
+	        					<h5>Macarrão Penne Barilla</h5>
+								<p>com Ovos 500g</p>
+	        				</td>
+	        				<td class="prod-qtd">
+								<input type="number" name="quantidade" class="quantidade" min="1" value="1">
+							</td>
+
+							<td>
+								<p>R$ 2,89</p>
+							</td>
+	        			</tr>
+
+	        			<tr>
+	        				<td class="prod-info">
+	        					<img src="images/prod4.jpg">
+	        					<h5>Barra de Cereal sabor </h5>
+								<p>Morango com Chocolate</p>
+	        				</td>
+	        				<td class="prod-qtd">
+								<input type="number" name="quantidade" class="quantidade" min="1" value="1">
+							</td>
+
+							<td>
+								<p>R$ 3,89</p>
+							</td>
+	        			</tr>
+		        	</tbody>
+		        	
+		        	<tfoot>
+		        		<td></td>
+		        		<td style="float: right;"><h3>Total:</h3></td>
+		        		<td><h3>R$ 6,78</h3></td>
+		        	</tfoot>
+		        </table>
+		      </div>
+
+		      <div>
+			      
+			      
+			  </div>
+
+		      <!-- Modal footer -->
+		      <div class="modal-footer">
+		        <a  class="btn btn-danger" href="login.html">Concluir Compra</a>
+		      </div>
+
+		    </div>
+		  </div>
+		</div>
+
+		<div class="container">
+
+			<div class="destaques">
+				<h3 class="row">Novidades</h3>
+				<div class="row">
+					<div class="prod ">
+						<div class="corpo-prod">
+							<img src="images/prod.jpg" class="rounded img-fluid">
+							<div class="decricao-prod">
+								<h5>Macarrão Penne Barilla</h5>
+								<p>com Ovos 500g</p>
+								<p>R$ 2,89</p>
+							</div>
+						</div>
+						<button type="button" name="comprar" class="btn btn-danger btn-block" type="button" data-toggle="modal" data-target="#myModal"> Comprar</button>
+					</div>
+
+					<div class="prod ">
+						<div class="corpo-prod">
+							<img src="images/prod1.jpg" class="rounded img-fluid">
+							<div class="decricao-prod">
+								<h5>Azeite Português</h5>
+								<p> Extra Virgem Frutado 500ml</p>
+								<p>R$ 3,05</p>
+							</div>
+						</div>
+						<button type="button" name="comprar" class="btn btn-danger btn-block" type="button" data-toggle="modal" data-target="#myModal"> Comprar</button>
+					</div>
+
+					<div class="prod ">
+						<div class="corpo-prod">
+							<img src="images/prod4.jpg" class="rounded img-fluid">
+							<div class="decricao-prod">
+								<h5>Barra de Cereal sabor </h5>
+								<p>Morango com Chocolate</p>
+								<p>R$ 3,89</p>
+							</div>
+						</div>
+						<button type="button" name="comprar" class="btn btn-danger btn-block" type="button" data-toggle="modal" data-target="#myModal"> Comprar</button>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="row">
+
+				<div class="prod ">
+					<div class="corpo-prod">
+						<img src="images/prod2.jpg" class="rounded img-fluid">
+						<div class="decricao-prod">
+							<h5>Milho Verde em Conserva</h5>
+							<p> Light Bonduelle 225g</p>
+							<p>R$ 3,05</p>
+						</div>
+					</div>
+					<button type="button" name="comprar" class="btn btn-danger btn-block" type="button" data-toggle="modal" data-target="#myModal"> Comprar</button>
+				</div>
+
+				<div class="prod ">
+					<div class="corpo-prod">
+						<img src="images/prod3.jpg" class="rounded img-fluid">
+						<div class="decricao-prod">
+							<h5>Arroz Branco</h5>
+							<p>Longo-fino Tipo 1 Prato Fino 5 Kg</p>
+							<p>R$ 17,49 </p>
+						</div>
+					</div>
+					<button type="button" name="comprar" class="btn btn-danger btn-block" type="button" data-toggle="modal" data-target="#myModal"> Comprar</button>
+				</div>
+
+				<div class="prod">
+					<div class="corpo-prod">
+						<img src="images/prod5.jpg" class="rounded img-fluid">
+						<div class="decricao-prod">
+							<h5>Chandelle Chocolate</h5>
+							<p>Nestlé 720g 8 Unidadese</p>
+							<p>R$10,48</p>
+						</div>
+					</div>
+					<button type="button" name="comprar" class="btn btn-danger btn-block" type="button" data-toggle="modal" data-target="#myModal"> Comprar</button>
+				</div>
+
+				<div class="prod ">
+					<div class="corpo-prod">
+						<img src="images/prod6.jpg" class="rounded img-fluid">
+						<div class="decricao-prod">
+							<h5>Molho de Tomate</h5>
+							<p>Tradicional Quero 340g</p>
+							<p>R$ 1,35</p>
+						</div>
+					</div>
+					<button type="button" name="comprar" class="btn btn-danger btn-block" type="button" data-toggle="modal" data-target="#myModal"> Comprar</button>
+				</div>
+
+				<div class="prod ">
+					<div class="corpo-prod">
+						<img src="images/prod7.jpg" class="rounded img-fluid">
+						<div class="decricao-prod">
+							<h5>Leite Nestlé Ninho</h5>
+							<p>Integral UHT Tipo A 1 Litro</p>
+							<p>R$ 3,99</p>
+						</div>
+					</div>
+					<button type="button" name="comprar" class="btn btn-danger btn-block" type="button" data-toggle="modal" data-target="#myModal"> Comprar</button>
+				</div>
+
+				<div class="prod ">
+					<div class="corpo-prod">
+						<img src="images/prod8.jpg" class="rounded img-fluid">
+						<div class="decricao-prod">
+							<h5>Achocolatado Nescau</h5>
+							<p>Lata 400g</p>
+							<p>R$ 5,99</p>
+						</div>
+					</div>
+					<button type="button" name="comprar" class="btn btn-danger btn-block" type="button" data-toggle="modal" data-target="#myModal"> Comprar</button>
+				</div>
+
+			</div>
+			
+		</div>
+
+		<footer>
+			<div>
+				<span class="fa fa-shopping-cart"></span> <span>Mercado Online</span><br>
+				<span class="fas fa-envelope"></span> mercadoonline@email.com<br>
+				<span class="fas fa-map-marker-alt"></span> Nome da Rua , 123 , Cidade.
+			</div>
+		</footer> 
+
+		<script type="text/javascript">
+
+			//controla expanção da barra
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+			  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+			    document.getElementById("navbar").style.padding = "0 10px";
+			    document.getElementById("logo").style.fontSize = "1.5em";
+			  } else {
+			    document.getElementById("navbar").style.padding = "8px 10px";
+			    document.getElementById("logo").style.fontSize = "1.7em";
+			  }
+			}
+			
+
+			//controla rolagem do menu de categorias
+			$(".dropdown").on("show.bs.dropdown", 
+				function desfixa(){
+					if (window.matchMedia("(max-width: 992px)").matches)
+						document.getElementById("navbar").style.position = "static";
+				});
+
+			$(".dropdown").on("hidden.bs.dropdown", 
+				function desfixa(){
+						document.getElementById("navbar").style.position = "sticky";
+						document.getElementById("navbar").style.top = "0";
+						document.getElementById("navbar").style.widith = "100%";
+				});
+							
+		</script>
+	
+	</body>
+</html>
